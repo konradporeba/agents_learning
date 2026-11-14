@@ -2,7 +2,7 @@
 
 One pet project, built end to end, that takes you from "senior SDET" to "can design, build, evaluate, ship and operate an agentic AI application".
 
-Start with the [project brief](00-project-brief.md), then work through the phases in order.
+Start with the [project brief](00-project-brief.md), then work through the phases in order. Checklist progress is in [PROGRESS.md](PROGRESS.md).
 
 ## The project in one paragraph
 

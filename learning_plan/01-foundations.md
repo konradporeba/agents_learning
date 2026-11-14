@@ -24,12 +24,12 @@ A repository with working tooling, local dependencies in Docker Compose, a CI wo
 
 ### Repository and tooling
 
-- [ ] `git init`, create the layout from the [project brief](00-project-brief.md#repository-layout), add `.gitignore`, `.editorconfig`, a root `README.md`.
-- [ ] Backend tooling: `uv` for dependencies and virtualenv, `ruff` for lint and format, a type checker (`mypy` or `pyright`), `pytest`.
-- [ ] Frontend tooling: `pnpm`, a Vite React TypeScript skeleton in `web/`, ESLint, Vitest.
-- [ ] `pre-commit` hooks for format, lint and a secret scanner such as `gitleaks`.
-- [ ] `docs/adr/0000-template.md` and your first ADR: which LLM provider and models you will use and why.
-- [ ] A `Makefile` or `justfile` with `up`, `down`, `test`, `lint`, `fmt`.
+- [x] `git init`, create the layout from the [project brief](00-project-brief.md#repository-layout), add `.gitignore`, `.editorconfig`, a root `README.md`.
+- [x] Backend tooling: `uv` for dependencies and virtualenv, `ruff` for lint and format, a type checker (`mypy` or `pyright`), `pytest`.
+- [x] Frontend tooling: `pnpm`, a Vite React TypeScript skeleton in `web/`, ESLint, Vitest.
+- [x] `pre-commit` hooks for format, lint and a secret scanner such as `gitleaks`.
+- [x] `docs/adr/0000-template.md` and your first ADR: which LLM provider and models you will use and why.
+- [x] A `Makefile` or `justfile` with `up`, `down`, `test`, `lint`, `fmt`.
 
 ### Local dependencies
 
