@@ -1,0 +1,27 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.5
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: uv run --directory backend mypy
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: eslint
+        name: eslint
+        entry: web/node_modules/.bin/eslint --config web/eslint.config.js
+        language: system
+        files: ^web/.*\.[jt]sx?$
+        pass_filenames: true
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
