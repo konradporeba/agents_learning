@@ -1,0 +1,12 @@
+---
+description: Keep LLM spend capped and use the fake model unless a real model is required
+alwaysApply: true
+---
+
+# LLM cost
+
+- UI work, Playwright, k6, and graph unit tests use the fake LLM streamer or a scripted fake chat model. Do not call a provider for these.
+- A real model is for the labs, manual traces, and eval runs that a phase asks for.
+- Never commit API keys, `.env`, or tokens. Commit `.env.example` only.
+- If the user has not confirmed a hard spending cap on the provider account, say so before the first real call.
+- Before a change that raises tokens per run (bigger context, larger tool results, extra model calls), say what it will cost.

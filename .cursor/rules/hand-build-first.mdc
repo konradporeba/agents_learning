@@ -1,0 +1,17 @@
+---
+description: Build the raw version before using a library helper
+alwaysApply: true
+---
+
+# Hand-build before the prebuilt
+
+When a phase says to write the raw version first, do not jump to the library helper. The raw version goes in `labs/` or the app, and it must run before the library version.
+
+- A tool-calling loop before `create_agent`.
+- SQL retrieval and reciprocal rank fusion before a retriever class.
+- A metric function before Ragas or DeepEval.
+- Trimming and summarising before summarisation middleware.
+
+If the raw version is not in the repo, help the user write it. Move to the library only after it runs and the user can explain what it does.
+
+The user saying "use the library directly" overrides this. Note what they skipped.

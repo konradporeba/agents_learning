@@ -1,0 +1,16 @@
+---
+description: Stay on the current learning-plan phase until its definition of done is met
+alwaysApply: true
+---
+
+# Finish the phase
+
+The plan is `learning_plan/`. Work the current phase only.
+
+- Read that phase file before implementing.
+- Do not pull a later phase forward. Langfuse belongs in phase 05, RAG in 06, Kubernetes in 12.
+- Leave "Break it on purpose" in place. Do not skip a drill to save time.
+- "Definition of done" is the exit check. Do not tick a phase done in `learning_plan/README.md` unless those checks pass.
+- API names in the plan are pointers. At the start of a phase, check current official docs before writing code against them.
+
+Depth on fewer phases beats a shallow pass over all of them.

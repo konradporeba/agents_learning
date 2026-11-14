@@ -1,0 +1,16 @@
+---
+description: Require traces and evals before changing prompts or agent behaviour
+alwaysApply: true
+---
+
+# Trace first, then change
+
+From phase 05 on, do not change a prompt, a tool description, or an agent flow from a guess.
+
+1. Look at the Langfuse trace for a failing run: model calls, tool calls, token counts, cost.
+2. Name the failure: wrong tool, dropped context, invented citation, cost, or something else specific.
+3. Change one thing.
+
+From phase 09 on, run the relevant eval before and after that change. Do not call it an improvement without both numbers. A small swing on a small set is noise; say so.
+
+If Langfuse or the eval runner does not exist yet, say that instead of inventing a trace.

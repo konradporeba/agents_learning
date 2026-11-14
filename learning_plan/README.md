@@ -79,6 +79,8 @@ The hour figures are my rough estimates for someone with your background, not me
 
 ## Working rules
 
+These six rules are also Cursor project rules in [`.cursor/rules/`](../.cursor/rules/), each with `alwaysApply: true`, so every model and agent working in this repo follows them. ADR and journal updates are skills in [`.cursor/skills/`](../.cursor/skills/).
+
 1. **Write the agent code yourself.** Use an AI assistant as a reviewer and tutor for phases 04–10: ask it to explain, critique, and quiz you. Let it generate boilerplate (Dockerfiles, React forms, Helm scaffolding) where you already know what good looks like.
 2. **Hand-build before you use the prebuilt.** Each phase has you write the raw version first (a tool loop, a retrieval function, a metric) and then switch to the library. You need this to debug the library later.
 3. **Keep an engineering log.** One ADR in `docs/adr/` per real decision, plus a short `docs/journal.md` entry per session: what you built, what broke, what surprised you. This becomes your interview material.

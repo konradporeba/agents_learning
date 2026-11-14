@@ -1,0 +1,14 @@
+---
+description: Record real decisions as ADRs and session notes in the journal
+alwaysApply: true
+---
+
+# Engineering log
+
+The log is interview material. Keep it current without being asked.
+
+- A real decision, meaning a choice with alternatives and consequences: follow the `write-adr` skill and add `docs/adr/NNNN-title.md`.
+- A session that built, broke, or changed something: follow the `write-journal` skill and update `docs/journal.md`.
+- Skip both for a question that changed no files and made no decision.
+- Do not invent a decision or a result. If the outcome is unknown, write that.
+- The user saying "don't log this" overrides this rule.
