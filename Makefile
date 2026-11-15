@@ -1,14 +1,18 @@
 .PHONY: up down test lint fmt
 
 COMPOSE_FILE := deploy/compose/docker-compose.yml
+COMPOSE_FLAGS := -f $(COMPOSE_FILE)
+ifneq ($(wildcard .env),)
+COMPOSE_FLAGS += --env-file .env
+endif
 PNPM_VERSION := 12.18.0
 PNPM := web/node_modules/.bin/pnpm
 
 up:
-	docker compose -f $(COMPOSE_FILE) up -d
+	docker compose $(COMPOSE_FLAGS) up -d --wait
 
 down:
-	docker compose -f $(COMPOSE_FILE) down
+	docker compose $(COMPOSE_FLAGS) down --remove-orphans
 
 test: $(PNPM)
 	uv run --directory backend pytest

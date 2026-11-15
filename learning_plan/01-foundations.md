@@ -33,8 +33,8 @@ A repository with working tooling, local dependencies in Docker Compose, a CI wo
 
 ### Local dependencies
 
-- [ ] `deploy/compose/docker-compose.yml` with Postgres (use an image that includes pgvector), Redis and MongoDB, each with a healthcheck and a named volume.
-- [ ] Configuration through `pydantic-settings` reading environment variables; commit `.env.example`, never `.env`.
+- [x] `deploy/compose/docker-compose.yml` with Postgres (use an image that includes pgvector), Redis and MongoDB, each with a healthcheck and a named volume.
+- [x] Configuration through `pydantic-settings` reading environment variables; commit `.env.example`, never `.env`.
 
 ### First CI
 

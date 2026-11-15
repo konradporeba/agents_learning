@@ -2,6 +2,12 @@
 
 Newest entry first. One entry per work day.
 
+## 2026-11-15
+
+**Phase:** 01
+**Built:** `deploy/compose/docker-compose.yml` runs Postgres (`pgvector/pgvector:0.8.7-pg17`), Redis (`redis:8.8.4`), and MongoDB (`mongo:8.0.38`). Each has a healthcheck and a named volume. `make up` waited until all three were healthy. `make down --remove-orphans` removed the containers and the network; the three volumes remained. `pg_available_extensions` lists `vector` 0.8.7 with no installed version. `backend/src/triage_copilot/settings.py` reads the same variables through pydantic-settings 2.16.3. `.env.example` is the committed sample. gitleaks found no leaks in it. pytest: 3 passed.
+**Next:** First CI workflow. The local-dependency boxes are checked after a manual `make up` / `make down`. Tracker is 8 of 482. OpenRouter model tiers are unset, and no spending cap has been confirmed.
+
 ## 2026-11-14
 
 **Phase:** 01
