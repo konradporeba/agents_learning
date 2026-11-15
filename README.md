@@ -54,6 +54,12 @@ The Postgres image is `pgvector/pgvector:0.8.7-pg17`. The vector extension is in
 uv run labs/chat_call.py
 ```
 
+`labs/statelessness.py` asks a follow-up with no previous turn, then asks it again with that turn resent:
+
+```sh
+uv run labs/statelessness.py
+```
+
 The script refuses any model that is not in its price list. That list is the three free NVIDIA text models.
 
 ## Git hooks

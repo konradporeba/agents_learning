@@ -46,7 +46,7 @@ A repository with working tooling, local dependencies in Docker Compose, a CI wo
 Write each as a small script in `labs/` and keep notes on what you observed.
 
 - [x] **Chat call**: send a system and user message, print the response and the token usage, compute the cost from the price list.
-- [ ] **Statelessness**: ask a follow-up question without resending history and see it fail; then resend history.
+- [x] **Statelessness**: ask a follow-up question without resending history and see it fail; then resend history.
 - [ ] **Streaming**: stream a response, measure time to first token and tokens per second.
 - [ ] **Structured output**: parse a response into a Pydantic model. Then make validation fail on purpose and implement one retry that feeds the validation error back.
 - [ ] **Tool loop by hand**: define two Python functions as tools, loop "call model → run requested tools → append results" until the model stops asking for tools, with a maximum iteration cap. This 50-line loop is the core of every agent framework.
