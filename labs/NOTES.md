@@ -29,3 +29,16 @@ The first call was told "the secret word is mangrove" and replied `mangrove` (35
 A new call that asked for the secret word and did not include that turn replied: "I don't know, because this conversation does not contain a secret word you gave me." That call used 43 prompt tokens.
 
 The same question, with the first user message and the assistant reply sent again, replied `mangrove`. That call used 73 prompt tokens. The model had no memory of the first call. The word came back only because the script sent the earlier messages again, and that resend is why the prompt was larger.
+
+## Streaming
+
+Same model, temperature 0, reasoning capped at 120. The runs below used `max_tokens` 400. Cost was $0. `uv run labs/streaming.py`.
+
+The reply arrived as a stream, not one block. Two runs of the same script:
+
+| Run | Time to first visible token | Total | Completion tokens | Reasoning tokens | Tokens per second |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| First | 1.391s | 1.707s | 195 | 119 | 195 / 1.707, about 114 |
+| Second | 2.868s | 38.783s | 186 | 119 | 4.80 |
+
+Both had 37 prompt tokens, `finish_reason: stop`, and cost $0. Tokens per second is completion tokens divided by the whole call. The first visible token is what a chat UI can show; the total is when the answer is done. On the slow run those two waits were far apart, so a single rate hides how long the user waits before any text.

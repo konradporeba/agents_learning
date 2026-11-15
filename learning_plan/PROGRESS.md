@@ -4,13 +4,13 @@ Counts of `- [x]` and `- [ ]` in the phase files. Recounted 2026-11-15.
 
 A phase stays open in the [plan index](README.md) until its definition of done is checked. Phase 00 has no checklist.
 
-**12 / 482** items checked.
+**13 / 482** items checked.
 
 ```mermaid
 pie showData
     title Checklist items
-    "Checked" : 12
-    "Open" : 470
+    "Checked" : 13
+    "Open" : 469
 ```
 
 ```mermaid
@@ -18,13 +18,13 @@ xychart-beta
     title "Percent of checklist items checked"
     x-axis [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16]
     y-axis "Percent" 0 --> 100
-    bar [52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    bar [57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
 | Phase | Items | |
 | --- | ---: | --- |
 | 00 [Project brief](00-project-brief.md) | no checklist | |
-| 01 [Foundations](01-foundations.md) | 12/23 | `██████████░░░░░░░░░░` |
+| 01 [Foundations](01-foundations.md) | 13/23 | `███████████░░░░░░░░░` |
 | 02 [Backend core](02-backend-core.md) | 0/26 | `░░░░░░░░░░░░░░░░░░░░` |
 | 03 [Realtime chat](03-realtime-chat.md) | 0/28 | `░░░░░░░░░░░░░░░░░░░░` |
 | 04 [First agent](04-first-agent.md) | 0/26 | `░░░░░░░░░░░░░░░░░░░░` |
@@ -43,14 +43,14 @@ xychart-beta
 
 ## Phase 01
 
-12/23. Repository and tooling, the local stores, the first CI setup, and the chat-call and statelessness labs are done. The other labs and the definition of done are open.
+13/23. Repository and tooling, the local stores, the first CI setup, and the chat, statelessness, and streaming labs are done. The other labs and the definition of done are open.
 
 ```mermaid
 xychart-beta
     title "Phase 01 sections"
     x-axis [Tooling, Stores, CI, Labs, Done]
     y-axis "Percent" 0 --> 100
-    bar [100, 100, 100, 25, 0]
+    bar [100, 100, 100, 38, 0]
 ```
 
 | Section | Items | |
@@ -58,5 +58,5 @@ xychart-beta
 | Repository and tooling | 6/6 | `████████████████████` |
 | Local dependencies | 2/2 | `████████████████████` |
 | First CI | 2/2 | `████████████████████` |
-| LLM lab | 2/8 | `█████░░░░░░░░░░░░░░░` |
+| LLM lab | 3/8 | `████████░░░░░░░░░░░░` |
 | Definition of done | 0/5 | `░░░░░░░░░░░░░░░░░░░░` |

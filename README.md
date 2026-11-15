@@ -60,6 +60,12 @@ uv run labs/chat_call.py
 uv run labs/statelessness.py
 ```
 
+`labs/streaming.py` streams one reply and prints time to the first visible token, total time, and completion tokens per second after that first token:
+
+```sh
+uv run labs/streaming.py
+```
+
 The script refuses any model that is not in its price list. That list is the three free NVIDIA text models.
 
 ## Git hooks
