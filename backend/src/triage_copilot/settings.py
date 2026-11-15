@@ -29,6 +29,10 @@ class Settings(BaseSettings):
     mongo_host: str = "localhost"
     mongo_port: int = 27017
 
+    openrouter_api_key: str = ""
+    openrouter_model: str = "nvidia/nemotron-3.5-lightning:free"
+    openrouter_base_url: str = "https://openrouter.ai/api/v1"
+
     def postgres_dsn(self) -> str:
         user = quote_plus(self.postgres_user)
         password = quote_plus(self.postgres_password)

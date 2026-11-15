@@ -46,6 +46,16 @@ The Postgres image is `pgvector/pgvector:0.8.7-pg17`. The vector extension is in
 
 `main` is protected by the repository ruleset [Protect main](https://github.com/konradporeba/agents_learning/rules/27303201). A direct push is rejected, including from an admin. Changes go through a pull request. The `backend` and `web` checks must pass, and the branch must be up to date with `main`. No approving review is required. Force-pushes and deletion of `main` are rejected.
 
+## Labs
+
+`labs/chat_call.py` sends one system message and one user message to OpenRouter with the OpenAI SDK. It prints the reply, the token counts, and the cost computed from a price list in the script. The default model is `nvidia/nemotron-3.5-lightning:free` (30B total, 3B active). Put `OPENROUTER_API_KEY` in `.env`, then:
+
+```sh
+uv run labs/chat_call.py
+```
+
+The script refuses any model that is not in its price list. That list is the three free NVIDIA text models.
+
 ## Git hooks
 
 ```sh

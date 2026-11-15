@@ -16,6 +16,9 @@ _ENV_KEYS = (
     "MONGO_DB",
     "MONGO_HOST",
     "MONGO_PORT",
+    "OPENROUTER_API_KEY",
+    "OPENROUTER_MODEL",
+    "OPENROUTER_BASE_URL",
 )
 
 
@@ -31,6 +34,8 @@ def test_defaults_match_compose(monkeypatch: pytest.MonkeyPatch) -> None:
         settings.mongo_dsn()
         == "mongodb://triage:triage@localhost:27017/triage?authSource=admin"
     )
+    assert settings.openrouter_api_key == ""
+    assert settings.openrouter_model == "nvidia/nemotron-3.5-lightning:free"
 
 
 def test_environment_overrides_defaults(monkeypatch: pytest.MonkeyPatch) -> None:
