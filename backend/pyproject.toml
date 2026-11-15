@@ -3,7 +3,9 @@ name = "triage-copilot"
 version = "0.1.0"
 description = "Triage Copilot backend"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "pydantic-settings>=2.16.3",
+]
 
 [project.scripts]
 triage-copilot = "triage_copilot:main"

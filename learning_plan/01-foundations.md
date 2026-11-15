@@ -33,21 +33,21 @@ A repository with working tooling, local dependencies in Docker Compose, a CI wo
 
 ### Local dependencies
 
-- [ ] `deploy/compose/docker-compose.yml` with Postgres (use an image that includes pgvector), Redis and MongoDB, each with a healthcheck and a named volume.
-- [ ] Configuration through `pydantic-settings` reading environment variables; commit `.env.example`, never `.env`.
+- [x] `deploy/compose/docker-compose.yml` with Postgres (use an image that includes pgvector), Redis and MongoDB, each with a healthcheck and a named volume.
+- [x] Configuration through `pydantic-settings` reading environment variables; commit `.env.example`, never `.env`.
 
 ### First CI
 
-- [ ] `.github/workflows/ci.yml`: on pull request, run lint, type check and unit tests for `backend/` and `web/` as separate jobs with dependency caching.
-- [ ] Protect `main`: require the CI checks and a pull request, even though you are working alone. You are practising the workflow.
+- [x] `.github/workflows/ci.yml`: on pull request, run lint, type check and unit tests for `backend/` and `web/` as separate jobs with dependency caching.
+- [x] Protect `main`: require the CI checks and a pull request, even though you are working alone. You are practising the workflow.
 
 ### LLM lab (raw provider SDK, no LangChain yet)
 
 Write each as a small script in `labs/` and keep notes on what you observed.
 
-- [ ] **Chat call**: send a system and user message, print the response and the token usage, compute the cost from the price list.
-- [ ] **Statelessness**: ask a follow-up question without resending history and see it fail; then resend history.
-- [ ] **Streaming**: stream a response, measure time to first token and tokens per second.
+- [x] **Chat call**: send a system and user message, print the response and the token usage, compute the cost from the price list.
+- [x] **Statelessness**: ask a follow-up question without resending history and see it fail; then resend history.
+- [x] **Streaming**: stream a response, measure time to first token and tokens per second.
 - [ ] **Structured output**: parse a response into a Pydantic model. Then make validation fail on purpose and implement one retry that feeds the validation error back.
 - [ ] **Tool loop by hand**: define two Python functions as tools, loop "call model → run requested tools → append results" until the model stops asking for tools, with a maximum iteration cap. This 50-line loop is the core of every agent framework.
 - [ ] **Embeddings**: embed 20 sentences, compute cosine similarity with NumPy, find a pair that is semantically close but shares no words, and a pair that shares words but means something different.
