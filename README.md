@@ -40,6 +40,12 @@ The project targets Python 3.12. Ruff lints and formats, mypy type-checks in str
 
 The Postgres image is `pgvector/pgvector:0.8.7-pg17`. The vector extension is in the image. Creating it is a later migration.
 
+## CI
+
+`.github/workflows/ci.yml` runs on pull requests. The `backend` job lints with ruff, type-checks with mypy, and runs pytest. The `web` job lints with ESLint, type-checks with `tsc -b`, and runs Vitest. Each job caches its dependencies. uv in CI is pinned to 0.9.0, the version that wrote `backend/uv.lock`. The runner installs pnpm 12.18.0 for the install; the dev dependency in `web/` is unchanged.
+
+`main` is protected by the repository ruleset [Protect main](https://github.com/konradporeba/agents_learning/rules/27303201). A direct push is rejected, including from an admin. Changes go through a pull request. The `backend` and `web` checks must pass, and the branch must be up to date with `main`. No approving review is required. Force-pushes and deletion of `main` are rejected.
+
 ## Git hooks
 
 ```sh

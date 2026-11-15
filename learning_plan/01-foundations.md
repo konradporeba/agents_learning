@@ -38,8 +38,8 @@ A repository with working tooling, local dependencies in Docker Compose, a CI wo
 
 ### First CI
 
-- [ ] `.github/workflows/ci.yml`: on pull request, run lint, type check and unit tests for `backend/` and `web/` as separate jobs with dependency caching.
-- [ ] Protect `main`: require the CI checks and a pull request, even though you are working alone. You are practising the workflow.
+- [x] `.github/workflows/ci.yml`: on pull request, run lint, type check and unit tests for `backend/` and `web/` as separate jobs with dependency caching.
+- [x] Protect `main`: require the CI checks and a pull request, even though you are working alone. You are practising the workflow.
 
 ### LLM lab (raw provider SDK, no LangChain yet)
 
